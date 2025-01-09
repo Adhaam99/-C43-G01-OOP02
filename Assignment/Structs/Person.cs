@@ -9,6 +9,7 @@ namespace Assignment.Structs
 {
     internal struct Person
     {
+       
         #region properties
 
         public string[]? Name { get; set; }
@@ -47,6 +48,8 @@ namespace Assignment.Structs
             }
         }
 
+       
+
         #endregion
 
         #region Getter
@@ -66,6 +69,8 @@ namespace Assignment.Structs
         }
 
         #endregion
+
+
 
     }
 }
