@@ -68,50 +68,83 @@ namespace Assignment
 
             #region Q3 -  Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
 
-            Person2[] persons = new Person2[3];
+            //Person2[] persons = new Person2[3];
 
-            bool flag;
+            //bool flag;
 
-            string name;
+            //string name;
 
-            int age;
+            //int age;
 
-            for (int i = 0; i < persons.Length; i++)
+            //for (int i = 0; i < persons.Length; i++)
+            //{
+            //    Console.WriteLine($"Enter Details of person {i + 1}");
+
+            //    do
+            //    {
+
+            //        Console.Write("Name: ");
+
+            //        name = Console.ReadLine() ;
+
+            //        Console.Write("Age: ");
+
+            //        flag = int.TryParse(Console.ReadLine(), out age);
+
+            //    }while (!flag && name is null);
+
+            //    persons[i] = new Person2(name , age);
+
+            //    Console.WriteLine();
+            //}
+
+            //Person2 oldestPerson = persons[0];
+
+            //for (int i = 1; i < 3; i++)
+            //{
+
+            //        if (persons[i].Age > oldestPerson.Age)
+            //        {
+            //            oldestPerson = persons[i];
+            //        }
+
+            //}
+
+            //Console.WriteLine($"The oldest person name is {oldestPerson.Name} and his age is {oldestPerson.Age}");
+
+            #endregion
+
+            #region Q4 - Create a struct named Rectangle that represents a rectangle with the following fields:width(type: double)height(type: double)
+
+            Recatngle rec = new Recatngle();
+
+            double width ,height;
+
+            bool flag01 , flag02;
+
+            do
             {
-                Console.WriteLine($"Enter Details of person {i + 1}");
 
-                do
-                {
+                Console.Write("Enter Width : ");
 
-                    Console.Write("Name: ");
+                flag01 = double.TryParse(Console.ReadLine(), out width);
 
-                    name = Console.ReadLine() ;
+                Console.Write("Enter Height : ");
 
-                    Console.Write("Age: ");
+                flag02 = double.TryParse(Console.ReadLine(), out height);
+            }while (!flag01 && !flag02);
 
-                    flag = int.TryParse(Console.ReadLine(), out age);
+            Console.WriteLine("===============================");
 
-                }while (!flag && name is null);
+            rec.Width = width;
+            rec.Height = height;
 
-                persons[i] = new Person2(name , age);
+            Console.WriteLine($"Area is {rec.Area}");
 
-                Console.WriteLine();
-            }
+            Console.WriteLine("===============================");
 
-            Person2 oldestPerson = persons[0];
 
-            for (int i = 1; i < 3; i++)
-            {
-                
-                    if (persons[i].Age > oldestPerson.Age)
-                    {
-                        oldestPerson = persons[i];
-                    }
-                
-            }
-
-            Console.WriteLine($"The oldest person name is {oldestPerson.Name} and his age is {oldestPerson.Age}");
-
+            Console.WriteLine(rec);
 
             #endregion
         }
